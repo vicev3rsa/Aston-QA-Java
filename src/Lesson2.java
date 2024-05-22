@@ -1,4 +1,4 @@
- import java.util.Arrays;
+import java.util.Arrays;
 public class Lesson2 {
     public static void main(String[] args) {
 //      ex. 1
