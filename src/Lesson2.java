@@ -36,6 +36,7 @@ public class Lesson2 {
     static void printThreeWords() {
         System.out.println("Orange\nBanana\nApple");
     }
+
 //    ex. 2
     static void checkSumSign(){
         int a = -5;
@@ -47,6 +48,7 @@ public class Lesson2 {
             System.out.println("Сумма отрицательная");
         }
     }
+
 //    ex. 3
     static void printColor(){
         int value = 8;
@@ -58,7 +60,8 @@ public class Lesson2 {
         else if (value > 100) {
             System.out.println("Зеленый");
         }
-        }
+    }
+
 //    ex. 4
     static void compareNumbers(){
         int a = 5;
@@ -71,11 +74,13 @@ public class Lesson2 {
         }
 
     }
+
 //    ex. 5
      static boolean isSumInLimit10And20(int a, int b){
         int sum = a+b;
         return (sum>=10 && sum<=20);
         }
+
 //    ex. 6
     static void numberSign(int a){
         if (a<0){
@@ -85,11 +90,12 @@ public class Lesson2 {
             System.out.println("Положительное");
         }
     }
+
 //    ex. 7
     static boolean negativeIsTrue(int a){
-
         return a<0;
     }
+
 //    ex. 8
     static void amountOfString(String str, int a){
         int i=0;
@@ -98,10 +104,12 @@ public class Lesson2 {
             i++;
         }
     }
+
 //    ex. 9
     static boolean leapYear(int a){
         return (a % 4 == 0 && a % 100 != 0) || a % 400 == 0;
     }
+
 //    ex. 10
     static void arrayInverse(){
         int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
@@ -117,6 +125,7 @@ public class Lesson2 {
         }
         System.out.println(Arrays.toString(arr));
     }
+
 //    ex. 11
     static void array100(){
         int[] arr = new int[100];
@@ -127,6 +136,7 @@ public class Lesson2 {
         }
         System.out.println(Arrays.toString(arr));
     }
+
 //    ex. 12
     static void arrayCheckLess6(){
         int [] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
@@ -138,11 +148,8 @@ public class Lesson2 {
         }
         System.out.println(Arrays.toString(arr));
     }
+
 //    ex. 13
-//    13. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
-//    и с помощью цикла(-ов) заполнить его диагональные элементы единицами (можно только одну из диагоналей, если обе сложно).
-//    Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны,
-//    то есть [0][0], [1][1], [2][2], ..., [n][n];
     static void twoDimArray(){
         int[][] arr = new int[5][5];
         for(int i = 0; i< arr.length; i++) {
@@ -156,6 +163,7 @@ public class Lesson2 {
             System.out.println();
         }
     }
+
 //    ex. 14
     static int[] arrayInitialValue(int len, int initialValue){
         int [] arr = new int[len];
