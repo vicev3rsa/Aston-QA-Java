@@ -54,7 +54,8 @@ public class Lesson2 {
         int value = 8;
         if(value <=0) {
             System.out.println("Красный");
-        } else if (value > 0 && value <= 100) {
+        } 
+        else if (value > 0 && value <= 100) {
             System.out.println("Желтый");
         }
         else if (value > 100) {
@@ -69,10 +70,10 @@ public class Lesson2 {
 
         if (a >= b) {
             System.out.println("a >= b");
-        } else {
+        } 
+            else {
             System.out.println("a < b");
-        }
-
+            }
     }
 
 //    ex. 5
@@ -106,19 +107,19 @@ public class Lesson2 {
     }
 
 //    ex. 9
-    static boolean leapYear(int a){
+    static boolean leapYear(int a) {
         return (a % 4 == 0 && a % 100 != 0) || a % 400 == 0;
     }
 
 //    ex. 10
-    static void arrayInverse(){
+    static void arrayInverse() {
         int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         int i = 0;
-        while (i< arr.length){
+        while (i< arr.length) {
             if (arr[i] == 1) {
                 arr[i] = 0;
             }
-                else {
+            else {
                 arr[i] = 1;
             }
             i++;
@@ -127,7 +128,7 @@ public class Lesson2 {
     }
 
 //    ex. 11
-    static void array100(){
+    static void array100() {
         int[] arr = new int[100];
         int j = 1;
         for(int i=0; i<arr.length; i++){
@@ -138,10 +139,10 @@ public class Lesson2 {
     }
 
 //    ex. 12
-    static void arrayCheckLess6(){
+    static void arrayCheckLess6() {
         int [] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         int j;
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<arr.length;i++) {
             if(arr[i]<6){
                 arr[i]*=2;
             }
@@ -150,13 +151,12 @@ public class Lesson2 {
     }
 
 //    ex. 13
-    static void twoDimArray(){
+    static void twoDimArray() {
         int[][] arr = new int[5][5];
         for(int i = 0; i< arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 if (i == j || i + j == arr[0].length-1) {
                     arr[i][j] = 1;
-
                 }
                 System.out.print(arr[i][j] + " ");
             }
