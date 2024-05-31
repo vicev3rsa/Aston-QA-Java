@@ -23,6 +23,7 @@ public class AnimalApp {
 
         // Создаем миску 2
         Bowl bowl2 = new Bowl(10);
+        
         // Cоздаем массив котов
         Cat[] cats = new Cat[3];
         cats[0] = new Cat("Мурзик ");
