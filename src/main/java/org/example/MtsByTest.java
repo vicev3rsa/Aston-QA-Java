@@ -24,6 +24,9 @@ public class MtsByTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(); //создание экземпляраа
         driver.get("http://mts.by");
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='cookie__buttons']/button[@id='cookie-agree']")));
+        button.click();
     }
 
     @Test
