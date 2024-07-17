@@ -60,6 +60,7 @@ public class MtsByTest {
     }
 
     @Test
+    @DisplayName("Переход по кнопке Продолжить")
     public void testPayForm() {
         WebElement phoneInput = driver.findElement(By.xpath("//input[@id='connection-phone']"));
         WebElement amountInput = driver.findElement(By.xpath("//input[@id='connection-sum']"));
