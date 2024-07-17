@@ -30,6 +30,7 @@ public class MtsByTest {
     }
 
     @Test
+    @DisplayName("Тест на соответствие названия")
     public void testBlockTitle() {
         WebElement blockTitle = driver.findElement(By.xpath(" //h2[contains(text(),'Онлайн пополнение')]/.."));
 
@@ -40,31 +41,28 @@ public class MtsByTest {
     }
 
     @Test
+    @DisplayName("Тест на логотипы платежных систем")
     public void testLogoPayPartners() {
 
         //Ищем список элементов, or действует так, что мы не останавливаемся на первом найденом элементе, а проверяем каждый
-        List<WebElement> logos = driver.findElements(By.xpath("//h2[contains(text(),'Онлайн пополнение')]" +
-                "/..//img[contains(@src, 'belkart') or contains (@src, 'visa') or contains (@src, 'mastercard')]"));
+        List<WebElement> logos = driver.findElements(By.xpath("//img[contains(@src, 'belkart') or contains (@src, 'visa') or contains (@src, 'mastercard')]"));
 
         System.out.println("Количество найденных логотипов: " + logos.size());
         assertFalse(logos.isEmpty(), "Не найдено ни одного логотипа платежной системы");
     }
 
     @Test
+    @DisplayName("Работа ссылки 'Подробнее о сервисе'")
     public void testMoreDetailsAboutService() {
-        WebElement moreDetailsLink = driver.findElement(By.xpath("//h2[contains(text(),'Онлайн пополнение')]" +
-                "/..//a[text()='Подробнее о сервисе']"));
+        WebElement moreDetailsLink = driver.findElement(By.xpath("//a[text()='Подробнее о сервисе']"));
         assertTrue(moreDetailsLink.isEnabled(), "Не кликается");
     }
 
     @Test
     public void testPayForm() {
-        WebElement phoneInput = driver.findElement(By.xpath(" //h2[contains(text(),'Онлайн пополнение')]/.." +
-                "//input[@id='connection-phone']"));
-        WebElement amountInput = driver.findElement(By.xpath(" //h2[contains(text(),'Онлайн пополнение')]/.." +
-                "//input[@id='connection-sum']"));
-        WebElement buttonContinue = driver.findElement(By.xpath(" //h2[contains(text(),'Онлайн пополнение')]/.." +
-                "//button[text()='Продолжить']"));
+        WebElement phoneInput = driver.findElement(By.xpath("//input[@id='connection-phone']"));
+        WebElement amountInput = driver.findElement(By.xpath("//input[@id='connection-sum']"));
+        WebElement buttonContinue = driver.findElement(By.xpath("//button[text()='Продолжить']"));
 
         phoneInput.click();
         phoneInput.sendKeys("297777777");
@@ -92,7 +90,7 @@ public class MtsByTest {
     @AfterAll
     public static void tearDownClass() {
         if (driver != null) {
-            driver.quit();  // Закрываем браузер после завершения всех тестов
+            driver.quit();  
         }
     }
 }
