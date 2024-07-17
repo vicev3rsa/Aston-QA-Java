@@ -66,10 +66,8 @@ public class MtsByTest {
         WebElement amountInput = driver.findElement(By.xpath("//input[@id='connection-sum']"));
         WebElement buttonContinue = driver.findElement(By.xpath("//button[text()='Продолжить']"));
 
-        phoneInput.click();
+       
         phoneInput.sendKeys("297777777");
-
-        amountInput.click();
         amountInput.sendKeys("100");
 
         assertTrue(buttonContinue.isDisplayed(), "Кнопка 'Продолжить' не отображается.");
