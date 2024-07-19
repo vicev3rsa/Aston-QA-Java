@@ -1,17 +1,19 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.qameta.allure.junit5.AllureJunit5;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@ExtendWith({AllureJunit5.class})
 public class OnlineReplenishmentTest {
     private static WebDriver driver;
     WebDriverWait wait  =  new  WebDriverWait (driver, Duration.ofSeconds(10));

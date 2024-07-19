@@ -1,11 +1,13 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.qameta.allure.junit5.AllureJunit5;
 
 import java.time.Duration;
 import java.util.List;
@@ -15,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /*Для варианта «Услуги связи» заполнить поля в соответствии с пререквизитами из предыдущей темы,
     нажать кнопку «Продолжить» и в появившемся окне проверить корректность отображения суммы (в том числе на кнопке),
     номера телефона, а также надписей в незаполненных полях для ввода реквизитов карты, наличие иконок платёжных систем.*/
+@ExtendWith({AllureJunit5.class})
 public class PaymentModuleTest {
     private static WebDriver driver;
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
