@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"27e0afa01845b7cc1e6f59baee136dac","name":"OnlineReplenishmentTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}},{"uid":"7da9d81c74c94f6e1a91f8c2f44552bd","name":"PaymentModuleTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}}]}
