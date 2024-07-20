@@ -27,6 +27,9 @@ public class PaymentModuleTest {
         driver = new ChromeDriver(); //создание экземпляраа
         driver.get("http://mts.by");
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='cookie__buttons']/button[@id='cookie-agree']")));
+        button.click();
 
         WebElement phoneInput = driver.findElement(By.xpath(" //input[@id='connection-phone']"));
         WebElement amountInput = driver.findElement(By.xpath("//input[@id='connection-sum']"));
