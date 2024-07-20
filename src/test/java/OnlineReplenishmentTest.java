@@ -25,9 +25,9 @@ public class OnlineReplenishmentTest {
         driver.get("http://mts.by");
         String sum = "100.00";
         String phone = "297777777";
-        /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='cookie__buttons']/button[@id='cookie-agree']")));
-        button.click();*/
+        button.click();
     }
 
     @Test
